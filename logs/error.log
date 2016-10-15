@@ -74,3 +74,4 @@ coroutine 0:
 	[C]: in function 'log'
 	/Users/lintide/github/helloOpenresty/app/httpc.lua:17: in function </Users/lintide/github/helloOpenresty/app/httpc.lua:1>, client: 127.0.0.1, server: , request: "GET /httpc HTTP/1.1", host: "localhost:8080"
 2016/10/15 10:23:24 [error] 14726#0: send() failed (61: Connection refused) while resolving, resolver: 114.114.114.114:53
+2016/10/15 10:42:11 [error] 14905#0: *20 lua ssl certificate verify error: (19: self signed certificate in certificate chain), client: 127.0.0.1, server: , request: "GET /httpc HTTP/1.1", host: "localhost:8080"

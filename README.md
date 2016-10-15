@@ -61,3 +61,15 @@ $ openresty -s reload
 
   ngx.say(res.body)
   ```
+
+4. https 请求
+
+  出现错误：`self signed certificate in certificate chain`
+
+  解决方案
+  ```lua
+  local res, err = httpc:request_uri("https://github.com/", {
+    method = "GET",
+    ssl_verify = false,
+  })
+  ```

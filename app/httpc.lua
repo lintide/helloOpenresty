@@ -2,8 +2,9 @@
 
 local http = require "resty.http"
 local httpc = http.new()
-local res, err = httpc:request_uri("http://httpbin.org/get", {
-  method = "GET"
+local res, err = httpc:request_uri("https://github.com/", {
+  method = "GET",
+  ssl_verify = false,
 })
 
 if not res then
