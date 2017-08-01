@@ -80,3 +80,6 @@ use vs code plugin **REST Client**
 
 ###
 GET http://localhost:8080/mysql
+
+###
+GET http://localhost:8080/redis
