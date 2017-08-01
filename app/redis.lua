@@ -3,10 +3,13 @@ local function close_redis(red)
         return
     end
 
-    local ok, err = red:close()
-    if not ok then
-        ngx.say("close redis error: ", err)
-    end
+    --释放连接(连接池实现)  
+    local pool_max_idle_time = 10000 --毫秒  
+    local pool_size = 100 --连接池大小  
+    local ok, err = red:set_keepalive(pool_max_idle_time, pool_size)  
+    if not ok then  
+        ngx.say("set keepalive error : ", err)  
+    end  
 end
 
 local redis = require('resty.redis');
